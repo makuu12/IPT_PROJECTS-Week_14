@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Validation</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>Number Validation</h1>
+        <h3>(Multiple of 5)</h3>
+        <form>
+            <label for="number">Enter a number:</label>
+            <input type="number" id="number" name="number">
+            <button type="button" onclick="validateNumber()">Ok</button>
+            <br>
+            <p id="result"></p>
+    </center>
+
+    <script>
+        function validateNumber() {
+            var number = parseInt(document.getElementById('number').value);
+            if (number % 5 === 0) {
+                var output = (number % 2 === 0) ? 'x' : 'y';
+                document.getElementById('result').innerHTML = output;
+            }
+            else {
+                document.getElementById('result').innerHTML = 'Please enter a number that is a multiple of 5.';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
